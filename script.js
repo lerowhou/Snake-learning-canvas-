@@ -3,20 +3,28 @@ if (canvas.getContext){
 var qq = canvas.getContext('2d'); //DOCTYPE
 }
 else {
-  document. write("Doesn't work!")
+  document. write("Doesn't work!");
 }
-var wd=document.getElementById('canvas').offsetWidth;
-var hg=document.getElementById('canvas').offsetHeight;
-
-function rand(min,max){
-i=Math.random()*(max-min)+min;
-return (Math.round(i));
+async function read(){
+var h = document.getElementById('height').value;
+var w = document.getElementById('width').value;
+var n = document.getElementById('n').value;
+}
+function refresh()
+{
+ $.ajax({
+            async: true,
+            type: "GET",
+            url: "http://127.0.0.1:3000/",
+            data: data,
+            success: function (html) {
+                $("#canvas").html(html);
+            }
+        });
 }
 
-function newApple(){
-apple=[rand(0,width),rand(0,height)];
-}
 
-qq.moveTo(30,30);
-qq.lineTo(rand(0,400),rand(0,400));
-qq.stroke();
+
+setInterval('read()', 30)
+setInterval('refresh()', 30)
+setInterval('draw',10)
