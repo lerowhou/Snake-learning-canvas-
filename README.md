@@ -1,1 +1,1 @@
-# Snake_learning_canvas
+# First try to make somethong with canvas
