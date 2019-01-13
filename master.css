@@ -1,10 +1,11 @@
+*{
+  font-family: 'Roboto Mono', monospace;
+}
 body{
   text-align: center;
+  padding-top: 5vh;
 }
-#canvas{
-  min-height: 500px;
-  background-color: #f7da5b;
-  border: 1px solid;
-  margin-left:auto;
-  margin-right: auto;
+canvas{
+  border: 1px solid black;
+
 }
