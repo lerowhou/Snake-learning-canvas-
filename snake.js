@@ -5,10 +5,13 @@ class Snake{
     this.sx=STEP;
     this.sy=0;
   }
+  go(){
+
+    }
   move(xdr,ydr){
-    this.x=this.x+xdr;
-    this.y=this.y+ydr;
-  }
+    this.x=this.x+(xdr*STEP);
+    this.y=this.y+(ydr*STEP);
+}
   snakeDraw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.beginPath();
